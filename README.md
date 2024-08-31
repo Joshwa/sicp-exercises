@@ -1,2 +1,2 @@
-Written in scheme/n
+Written in scheme, 
 Using STKlos
