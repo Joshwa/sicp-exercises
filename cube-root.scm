@@ -41,10 +41,8 @@
 ;x no longer needs to be passed as a parameter to every function since x is defined in the declaration of cube-root , the head
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (define (cube-root x)
-  (define (cube)
-    (* x x x))
   (define (good-enough? guess)
-    (< (abs (- (cube guess) x)) 0.01))
+    (< (abs (- (* guess guess guess) x)) 0.01))
   (define (improve guess)
     ( /  ( + ( / x (square guess))(* 2 guess)) 3))
   (define (cube-root-iterator guess)
